@@ -1,0 +1,74 @@
+controller_manager_ns: 'controller_manager'
+controller_list:
+  - name: dual/blue_shoulder_pan_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - blue_shoulder_pan_joint
+  - name: dual/blue_shoulder_lift_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - blue_shoulder_lift_joint
+  - name: dual/blue_elbow_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - blue_elbow_joint
+  - name: dual/blue_wrist_1_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - blue_wrist_1_joint
+  - name: dual/blue_wrist_2_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - blue_wrist_2_joint
+  - name: dual/blue_wrist_3_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - blue_wrist_3_joint
+  - name: dual/red_shoulder_pan_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - red_shoulder_pan_joint
+  - name: dual/red_shoulder_lift_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - red_shoulder_lift_joint
+  - name: dual/red_elbow_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - red_elbow_joint
+  - name: dual/red_wrist_1_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - red_wrist_1_joint
+  - name: dual/red_wrist_2_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - red_wrist_2_joint
+  - name: dual/red_wrist_3_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - red_wrist_3_joint

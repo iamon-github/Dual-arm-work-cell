@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<!-- the blue robot -->
+<robot name="dual" xmlns:xacro="http://www.ros.org/wiki/xacro">
+        <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro"/>
+
+
+  <!-- table -->
+  <xacro:include filename="$(find ur_description)/urdf/table.urdf"/>
+
+
+         <!-- room -->
+       <xacro:include filename="$(find ur_description)/urdf/room.urdf"/>
+
+
+
+
+	<xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+
+	<xacro:include filename="$(find ur_description)/urdf/ur10.urdf.xacro" />
+
+	<xacro:include filename="$(find robotiq_ft_sensor)/urdf/robotiq_ft300.urdf.xacro"/>
+
+	<xacro:robotiq_ft300 parent="blue_tool0" prefix="blue_">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+	</xacro:robotiq_ft300>
+
+	<!-- arm -->
+	<xacro:ur10_robot prefix="blue_" joint_limited="false"/>
+ 	<xacro:robotiq_85_gripper prefix="" parent="blue_robotiq_ft_frame_id">
+		 <origin xyz="0.0 0.0 0.0" rpy="0 -1.57079632679 0"/>
+	</xacro:robotiq_85_gripper>
+
+<!-- the red robot -->
+	<xacro:include filename="$(find robotiq_3f_gripper_visualization)/cfg/robotiq-3f-gripper_articulated_macro.xacro" />
+
+
+	<!-- arm -->
+	<xacro:ur10_robot prefix="red_" joint_limited="false"/>
+
+	<xacro:robotiq-3f-gripper_articulated prefix=""/>
+
+	<joint name="red_palm_arm" type="fixed">
+		<parent link="red_tool0"/>
+		<child link="palm"/>
+		<origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+	</joint>
+
+
+
+<!-- connecting the red and blue arms together to the room-->
+
+<joint name="room_arm1" type="fixed">
+<parent link="roommodel__link_2_clone_1"/>
+<child link="blue_base_link"/>
+<origin xyz="0.0 0.0 -0.05" rpy="3.1415 0 -1.5708"/>
+</joint>
+
+
+<joint name="room_arm2" type="fixed">
+<parent link="roommodel__link_2"/>
+<child link="red_base_link"/>
+<origin xyz="0.0 0.0 -0.05" rpy="3.1415 0 -1.5708"/>
+</joint>
+
+
+<joint name="room_table" type="fixed">
+<parent link="roommodel__link_0_0_clone"/>
+<child link="table_test__link_0"/>
+<origin xyz="0.0 0.0 0.9" rpy="0.0  0.0 1.5708"/>
+</joint>
+
+
+
+
+</robot>
+

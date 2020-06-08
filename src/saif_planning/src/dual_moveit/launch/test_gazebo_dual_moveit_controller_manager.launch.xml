@@ -1,0 +1,14 @@
+<launch>
+  <!-- <rosparam file="$(find dual_moveit)/config/test_ros_controllers.yaml"/> -->
+        <!-- <rosparam file="$(find red_moveit)/config/test_ur10_controllers_red_gazebo.yaml"/>
+        <rosparam file="$(find blue_moveit)/config/test_ur10_controllers_blue_gazebo.yaml"/> added & commented on Feb 28 2020 -->
+        <rosparam file="$(find dual_moveit)/config/t_controllers.yaml"/> <!-- test_controllers.yaml -->
+	<rosparam file="$(find dual_moveit)/config/t_list.yaml"/> <!-- test_controller_list.yaml -->
+	<rosparam file="$(find dual_moveit)/config/gazebo_ros_control_params.yaml" command="load"/>
+        <param name="use_controller_manager" value="false"/>
+        <param name="trajectory_execution/execuation_duration_monitoring" value="false"/>
+        <param name="moveit_controller_manager" value="moveit_simple_controller_manager/MoveItSimpleControllerManager"/>
+
+	<!-- <include file="$(find dual_moveit)/launch/test_ros_controllers.launch"/> -->
+</launch>
+

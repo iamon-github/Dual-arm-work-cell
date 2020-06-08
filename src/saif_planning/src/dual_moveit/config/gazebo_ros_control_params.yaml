@@ -1,0 +1,26 @@
+gazebo_ros_control:
+  pid_gains:
+    blue_shoulder_pan_joint:  {p: 12000, d: 50, i: 0.0, i_clamp: 10000}
+    blue_shoulder_lift_joint: {p: 30000, d: 100, i: 0.02, i_clamp: 10000}
+    blue_elbow_joint:         {p: 18000, d: 50, i: 0.01, i_clamp: 1}
+    blue_wrist_1_joint:       {p: 18000, d: 70, i: 0.01, i_clamp: 10000}
+    blue_wrist_2_joint:       {p: 12000, d: 70, i: 0.01, i_clamp: 1}
+    blue_wrist_3_joint:       {p: 5.0,  i: 0.05, d: 0.1, i_clamp: 0}
+    red_shoulder_pan_joint:   {p: 10000, d: 50, i: 0.0, i_clamp: 10000}
+    red_shoulder_lift_joint:  {p: 5070, d: 50, i: 0.02, i_clamp: 10000}
+    red_elbow_joint:          {p: 99, d: 30, i: 0.01, i_clamp: 1}
+    red_wrist_1_joint:        {p: 2000, d: 50, i: 0.01, i_clamp: 10000}
+    red_wrist_2_joint:        {p: 12000, d: 40, i: 0.01, i_clamp: 1}
+    red_wrist_3_joint:        {p: 18000, d: 50, i: 0.01, i_clamp: 1}
+    gripper_finger1_joint:    {p: 10.0,  i: 0, d: 0.0}
+    palm_finger_1_joint:      {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    palm_finger_2_joint:      {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_1_joint_1:         {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_1_joint_2:         {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_1_joint_3:         {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_2_joint_1:         {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_2_joint_2:         {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_2_joint_3:         {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_middle_joint_1:    {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_middle_joint_2:    {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    finger_middle_joint_3:    {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}

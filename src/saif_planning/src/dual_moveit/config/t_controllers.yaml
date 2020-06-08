@@ -1,0 +1,220 @@
+dual:   
+  # Position Controllers ---------------------------------------
+  #position_controllers/JointTrajectoryController
+  blue_shoulder_pan_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - blue_shoulder_pan_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      blue_shoulder_pan_joint:  {p: 12000, d: 50, i: 0.0, i_clamp: 10000}
+    constraints:
+      goal_time: 1.0
+      #stopped_velocity_tolerance: 0.0
+  blue_shoulder_lift_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - blue_shoulder_lift_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      blue_shoulder_lift_joint:  {p: 30000, d: 100, i: 0.02, i_clamp: 10000}
+    constraints:
+      goal_time: 1.0
+  blue_elbow_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - blue_elbow_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      blue_elbow_joint:  {p: 18000, d: 50, i: 0.01, i_clamp: 1}
+    constraints:
+      goal_time: 1.0
+      #stopped_velocity_tolerance: 0.0
+  blue_wrist_1_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - blue_wrist_1_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      blue_wrist_1_joint:  {p: 18000, d: 70, i: 0.01, i_clamp: 10000}
+    constraints:
+      goal_time: 1.0
+      stopped_velocity_tolerance: 0.0
+  blue_wrist_2_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - blue_wrist_2_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      blue_wrist_2_joint:  {p: 12000, d: 70, i: 0.01, i_clamp: 1}
+    constraints:
+      goal_time: 1.0
+      stopped_velocity_tolerance: 0.0
+  blue_wrist_3_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - blue_wrist_3_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      blue_wrist_3_joint:  {p: 5.0,  i: 0.05, d: 0.1, i_clamp: 0}
+    constraints:
+      goal_time: 1.0
+      stopped_velocity_tolerance: 0.0
+  red_shoulder_pan_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - red_shoulder_pan_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      red_shoulder_pan_joint:  {p: 10000, d: 50, i: 0.0, i_clamp: 10000}
+    constraints:
+      goal_time: 2.0
+  red_shoulder_lift_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - red_shoulder_lift_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      red_shoulder_lift_joint:  {p: 5070, d: 50, i: 0.02, i_clamp: 10000}
+    constraints:
+      goal_time: 2.0
+  red_elbow_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - red_elbow_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      red_elbow_joint:  {p: 99, d: 30, i: 0.01, i_clamp: 1}
+    constraints:
+      goal_time: 2.0
+  red_wrist_1_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - red_wrist_1_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      red_wrist_1_joint:  {p: 20000, d: 50, i: 0.01, i_clamp: 10000}
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 0.0
+  red_wrist_2_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - red_wrist_2_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      red_wrist_2_joint:  {p: 12000, d: 40, i: 0.01, i_clamp: 1}
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 0.0
+  red_wrist_3_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - red_wrist_3_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      red_wrist_3_joint:  {p: 18000, d: 50, i: 0.01, i_clamp: 1}
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 0.0
+      
+      
+  red_gripper_palm_finger_1_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - palm_finger_1_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      palm_finger_1_joint:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_11_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_1_joint_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_1_joint_1:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_12_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_1_joint_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_1_joint_2:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_13_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_1_joint_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_1_joint_3:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_palm_finger_2_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - palm_finger_2_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      palm_finger_2_joint:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_21_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_2_joint_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_2_joint_1:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_22_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_2_joint_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_2_joint_2:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_23_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_2_joint_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_2_joint_3:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_middle_1_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_middle_joint_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_middle_joint_1:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_middle_2_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_middle_joint_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_middle_joint_2:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0
+  red_gripper_finger_middle_3_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - finger_middle_joint_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+    gains:
+      finger_middle_joint_3:  {p: 500.0,  i: 0.05, d: 1, i_clamp: 0}
+    constraints:
+      goal_time: 2.0

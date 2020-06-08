@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+ <!--rosparam file="$(find dual_moveit)/config/ros_controllers.yaml" command="load"/-->
+  <!-- <arg name="controllers" default="joint_state_controller force_torque_sensor_controller vel_based_pos_traj_controller pos_based_pos_traj_controller
+															    joint_group_vel_controller"/> -->
+  <!-- <arg name="controllers" default="blue_arm_controller
+       red_arm_controller
+       blue_gripper_controller
+  red_gripper_controller"/> -->
+  
+  <arg name="controllers" default="blue_shoulder_pan_controller
+       blue_shoulder_lift_controller
+       blue_elbow_controller
+       blue_wrist_1_controller
+       blue_wrist_2_controller
+       blue_wrist_3_controller
+       red_shoulder_pan_controller
+       red_shoulder_lift_controller
+       red_elbow_controller
+       red_wrist_1_controller
+       red_wrist_2_controller
+       red_wrist_3_controller
+       red_gripper_palm_finger_1_controller
+       red_gripper_finger_11_controller
+       red_gripper_finger_12_controller
+       red_gripper_finger_13_controller
+       red_gripper_palm_finger_2_controller
+       red_gripper_finger_21_controller
+       red_gripper_finger_22_controller
+       red_gripper_finger_23_controller
+       red_gripper_finger_middle_1_controller
+       red_gripper_finger_middle_2_controller
+       red_gripper_finger_middle_3_controller"/> <!-- added and commented on Mar 10 2020 -->
+  
+  <!-- <rosparam file="$(find red_moveit)/config/test_ur10_controllers_red_gazebo.yaml" command="load"/>
+  <rosparam file="$(find blue_moveit)/config/test_ur10_controllers_blue_gazebo.yaml" command="load"/> -->
+  <rosparam file="$(find dual_moveit)/config/t_controllers.yaml" command="load"/> <!-- test_controllers.yaml -->
+  <rosparam file="$(find dual_moveit)/config/t_list.yaml" command="load"/> <!-- test_controller_list.yaml  commented on Mar 06 2020 -->
+  <rosparam file="$(find dual_moveit)/config/gazebo_ros_control_params.yaml" command="load"/> <!-- for loading pid gains of the joints {added on Mar 03 2020} -->
+  <!-- Load the controllers -->
+  <node name="ros_control_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" ns="/dual"
+    output="screen" args="spawn $(arg controllers)" />
+
+  <!-- <node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load blue_joint_group_position_controller red_joint_group_position_controller" /> -->
+  <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        respawn="false" output="screen">
+    <remap from="/joint_states" to="/dual/joint_states" />
+  </node> -->
+
+</launch>
