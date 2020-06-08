@@ -2,7 +2,7 @@ This folder holds planning modules and moveit configuration for the robot.
 
 ## Planning
 
-To run the spawn the models in Gazebo and rviz, just run in the terminal:
+To spawn the models in Gazebo and rviz, just run in the terminal:
 
 ```
 roslaunch dual_moveit test.launch
