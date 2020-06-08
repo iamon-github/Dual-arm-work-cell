@@ -12,3 +12,7 @@ Now, to test whether the controllers are working, try running the following comm
 ```
 rosrun scripts task1.py
 ```
+___
+After running the above two commands, the two arms in Gazebo will move something like this
+
+<img align="down" alt="" src="https://github.com/Developer-app9/Dual-arm-work-cell/blob/master/docs/images/running_simulation.gif" width="450" />
