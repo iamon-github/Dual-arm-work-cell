@@ -20,11 +20,12 @@ ___
 
 ___
 
-### Motion planning and control
+### Motion planning and control <img align="right" alt="" src="https://github.com/ipab-rad/saifer-surgery/blob/master/docs/images/arms.gif" width="150" />
 
-<img align="right" alt="" src="https://github.com/ipab-rad/saifer-surgery/blob/master/docs/images/arms.gif" width="150" />
+Check the directory **saif_planning** for details.  
 
-Check the directory **saif_planning** for details.
+
+
 ___
 
 ### 3D mouse control with spacenav
