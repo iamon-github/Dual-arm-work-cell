@@ -11,3 +11,16 @@ After cloning, the names can obviously be changed to make them convenient to use
 The key launch files that call the different config files and are used in the development of the simulation of dual-arm workcell are:
 
 ```test.launch```, ```test_gazebo.launch```, ```test_ros_controllers.launch```, ```test_controller_utils.launch```, ```test_trajectory_execution.launch.xml```, ```test_move_group.launch```, ```planning_context.launch```, ```moveit_rviz.launch```, ```moveit.rviz```
+
+## Calls to the different files made by the launch files
+
+| Launch file | Files called by it |
+|-------------|--------------------|
+| ```test.launch``` | ```t_dual.urdf```, ```test_gazebo.launch```, ```planning_context.launch```, ```test_move_group.launch```, ```moveit_rviz.launch``` |
+| ```test_gazebo.launch``` | ```t_dual.urdf```, ```empty_world.launch```, ```test_controller_utils.launch```, ```test_ros_controllers.launch``` |
+| ```test_ros_controllers.launch``` | ```t_controllers.yaml```, ```t_list.yaml```, ```gazebo_ros_control_params.yaml``` |
+| ```test_controller_utils.launch``` | ```test_joint_state_controller.yaml``` |
+| ```test_trajectory_execution.launch.xml``` | ```_moveit_controller_manager.launch.xml```, ```test_gazebo_dual_moveit_controller_manager.launch.xml``` |
+| ```test_move_group.launch``` | ```planning_context.launch```, ```planning_pipeline.launch.xml```, ```test_trajectory_execution.launch.xml```, ```sensor_manager.launch.xml``` |
+| ```planning_context.launch``` | ```t_dual.urdf```, ```test_dual.srdf```, ```joint_limits.yaml```, ```kinematics.yaml``` |
+| ```moveit_rviz.launch``` | ```moveit.rviz```, ```kinematics.yaml``` |
