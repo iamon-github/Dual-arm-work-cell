@@ -15,7 +15,8 @@ These cylinders have the collision disabled with the arms to which it is attache
 
 There is a fine difference between ```t_list.yaml``` and ```t_controllers.yaml``` :  
 &nbsp;&nbsp;```t_controllers.yaml``` is for the simulated robot/Gazebo plugin side  
-&nbsp;&nbsp;```t_list.yaml``` is for the MoveIt! side (moveit controller manager) and this can work after the controllers are up in the simulator (Gazebo in our case)  
+&nbsp;&nbsp;```t_list.yaml``` is for the MoveIt! side (moveit controller manager) and this can work after the controllers are up in the simulator  
+&nbsp;&nbsp;(Gazebo in our case)  
 So, it is essential to have both the YAML files (with the correct reference to the namespaces from the controller manager which is **dual** in our case) in order for the controllers to actuate the joints in the simulation.
 
 ---
