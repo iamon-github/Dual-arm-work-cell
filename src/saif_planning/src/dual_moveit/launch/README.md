@@ -20,7 +20,7 @@ The key launch files that call the different config files and are used in the de
 | Launch file | File(s) called by it |
 |-------------|--------------------|
 | ```test.launch``` | ```t_dual.urdf```, ```test_gazebo.launch```, ```planning_context.launch```, ```test_move_group.launch```, ```moveit_rviz.launch``` |
-| ```test_gazebo.launch``` | ```t_dual.urdf```, ```empty_world.launch```, ```test_controller_utils.launch```, ```test_ros_controllers.launch``` |
+| ```test_gazebo.launch``` | ```empty_world.launch```, ```t_dual.urdf```, ```test_controller_utils.launch```, ```test_ros_controllers.launch``` |
 | ```test_ros_controllers.launch``` | ```t_controllers.yaml```, ```t_list.yaml```, ```gazebo_ros_control_params.yaml``` |
 | ```test_controller_utils.launch``` | ```test_joint_state_controller.yaml``` |
 | ```test_trajectory_execution.launch.xml``` | ```_moveit_controller_manager.launch.xml```, ```test_gazebo_dual_moveit_controller_manager.launch.xml``` |
