@@ -6,6 +6,9 @@ The key config files that configure the different controllers of the arm models 
 
 And the semantic description of the two UR10 models used in the simulation is manifested in ```test_dual.srdf``` which corresponds to the visual description in ```t_dual.urdf``` (in **dual_arm_description/urdf/**)
 
+---
+## Things to note
+
 Note that the white cylinders "attached" to the two arms in urdf/srdf files account for the cables that are wrapped around in the real arms and work to closely resemble the actual spatial region that motion planning processes should use.
 
 These cylinders have the collision disabled with the arms to which it is attached in ```test_dual.srdf```
@@ -25,8 +28,8 @@ So, it is essential to have both the YAML files (with the correct reference to t
 - Controller manager that defines which controller controls which joint/group of joints
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here, in our simulation, each controller controls a single joint.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note also that every controller has **dual** defined as its namespace becuase our model has two arms (which we refer to as blue  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and red arm) which are a part of dual arm (workcell).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note also that every controller has **dual** defined as its namespace becuase our model has two arms (which we refer to as  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blue and red arm) which are a part of dual arm (workcell).
 
 ```t_controllers.yaml```
 - This YAML file defines that the controllers are in the **dual** namespace and also defines other characteristics such as the joints that they control, pid values and the constraints on goal time.
