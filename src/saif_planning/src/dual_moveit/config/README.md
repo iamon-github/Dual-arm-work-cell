@@ -35,4 +35,4 @@ So, it is essential to have both the YAML files (with the correct reference to t
 ```t_controllers.yaml```
 - This YAML file defines that the controllers are in the **dual** namespace and also defines other characteristics such as the joints that they control, pid values and the constraints on goal time.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that all the controllers are defined as effort_controllers (except the controllers that move the gripper joints)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that all the controllers are defined as **effort_controllers** (except the controllers that move the gripper joints)
